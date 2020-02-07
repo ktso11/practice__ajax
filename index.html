@@ -1,0 +1,73 @@
+<!--        1. LANG ATTR      -->
+<!-- allow user agents to render content more meaningfully based on 
+accepted cultural practice for a given language. Also assist speech synthesizers -->
+<html lang="en">
+  <head>
+    <!--      2. META DATA       -->
+    <!-- metadata about the HTML document, it is machine parsable.
+    Typically used to specify page description, keywords, author. 
+    used by browsers, search engines or other web services-->
+
+    <!--      2a. CHARSET       -->
+    <!-- web browser must know which character set to use.
+    utf-8 covers almost all of the characters and symbols in the world. -->
+    <meta charset="utf-8">
+
+    <!--      2b. VIEWPORT       -->
+    <!-- html5 introduced a method to set give browser instructions on how 
+    to control the page's dimensions and scaling.width=device-width 
+    means width of the page is equal to that of the user's device.
+    initial scale is the initial zoom level-->
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+    <title>Title</title>
+    <link rel="stylesheet" href="stylesheet/main.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  </head>
+
+  <body>
+
+    <main> 
+      <header>Some Title</header>
+
+           <!-- 3. HTML5 SEMANTICS and ARIA -->
+      <!--  it's easier for both people and machines to read and understand it
+        ( accessible rich internet applications)
+
+      ARIA roles for accessibility - mainly for screen readers. Some other
+      roles includes: article, img, row, toolbar, textbox, search
+      https://www.w3.org/WAI/PF/aria-1.1/roles for a full list
+    
+     ARIA is a set of attributes that developers add to web content 
+     to make applications more accessible to users with disabilities
+     communicate with a subset of the DOM called the accessibility tree.
+     The accessibility tree is a more simplified rendering of a website, 
+     this is what screen readers read from -->
+    <nav role="navigation">
+      <ul role="menu">
+        <!-- ARIA ATTR - Aria Owns 
+        aria-owns. To let the DOM now that the menu item has a 
+        parent child relationship with the menu items nested under it-->
+        <li aria-owns="child-item">
+          <a href="" role="menu-item"></a>
+        </li>
+      </ul>
+
+    </nav>
+    <!-- 4. IMG ATTR 
+    It is available to screen readers and search engines to index images and links. -->
+    <img src="" alt="image of a cat">
+
+    <!-- 5. SECTIONS - separate contents -->
+    
+      <form> 
+        <input id="input" placeholder="Search..." name="todo-input"> 
+        <button id="add">Add</button>
+        <button id="update"> Update</button>
+      </form>
+      <section id="recordsContainer"> 
+
+      </section>
+    </main>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+:root {
+   --main-bg-color: #F0F4F9;
+ }
+
+* {
+  /* browser to account for any border and padding in the values
+   you specify for an element's width and height. If you set an
+    element's width to 100 pixels, that 100 pixels will include 
+    any border or padding you added */
+  box-sizing: border-box;
+
+  /* The overflow is not clipped. The content renders outside
+   the element's box. DO NOT USE FOR SCROLLING PAGE */
+ 
+}
+
+/* Use position relative on parent ele if there are child ele that
+needs absolute positioning */
+
+body {
+   background-color: var(--main-bg-color);
+   font-family: Arial, Helvetica, sans-serif;
+}
+main {
+   width: 650px;
+   margin: 0 auto;
+   padding: 16px;
+   background-color: white;
+}
+
+header {
+   padding: 16px;
+   text-align: center;
+   background-color: blue;
+   color: white;
+   margin: 16px 0px;
+   border-radius: 16px;
+}
+
+button {
+   background-color: blue;
+   border-radius: 8px;
+   color: white;
+}
+
+#add {
+margin: 0px 8px;
+}
+
+form {
+   display: flex;
+   flex-direction: row;
+   margin-bottom: 50px;
+}
+
+input, button {
+   padding: 8px;
+}
+
+input {
+   width: 100%;
+   background-color: lightgrey;
+   border: none;
+}
+
+/* locking down the structure of your HTML. bad practice and problem for scalability. increase risk of breaking things */
+label, span{
+   display: block;
+}
+
+label {
+   font-size: 16px;
+}
+
+span {
+   margin: 8px 0px;
+   font-size: 8px;
+}
+#recordsContainer div {
+   padding: 24px;
+   background-color: lightgrey;
+   margin-bottom: 16px;
+   border-radius: 16px;
+   /* border: 1px solid gray; */
+}
+
