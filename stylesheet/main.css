@@ -1,21 +1,11 @@
 :root {
-   --main-bg-color: #F0F4F9;
+   --main-bg-color: rgb(45, 48, 53);
  }
 
 * {
-  /* browser to account for any border and padding in the values
-   you specify for an element's width and height. If you set an
-    element's width to 100 pixels, that 100 pixels will include 
-    any border or padding you added */
   box-sizing: border-box;
-
-  /* The overflow is not clipped. The content renders outside
-   the element's box. DO NOT USE FOR SCROLLING PAGE */
- 
 }
 
-/* Use position relative on parent ele if there are child ele that
-needs absolute positioning */
 
 body {
    background-color: var(--main-bg-color);
